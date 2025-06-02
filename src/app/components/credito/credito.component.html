@@ -1,0 +1,8 @@
+<h2>Asignar Crédito</h2>
+
+<form [formGroup]="creditoForm" (ngSubmit)="enviar()">
+  <input type="number" formControlName="cliente_id" placeholder="ID del Cliente">
+  <input type="number" formControlName="monto" placeholder="Monto del Crédito">
+  <input type="number" formControlName="tasa_interes" placeholder="Tasa de Interés">
+  <button type="submit">Asignar Crédito</button>
+</form>

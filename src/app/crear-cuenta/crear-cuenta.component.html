@@ -1,0 +1,7 @@
+<h2>Crear Cuenta</h2>
+<form [formGroup]="formulario" (ngSubmit)="guardar()">
+  <input type="number" formControlName="cliente_id" placeholder="ID Cliente" required />
+  <input type="text" formControlName="tipo_cuenta_id" placeholder="Tipo de cuenta" required />
+  <input type="number" formControlName="saldo" placeholder="Saldo inicial" required />
+  <button type="submit">Crear Cuenta</button>
+</form>

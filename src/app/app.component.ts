@@ -2,13 +2,15 @@ import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ClienteService } from './services/cliente.service';
 import { CreditoService } from './services/credito.service';
+import { CuentaService } from './services/cuenta.service';
 import { CreditoComponent } from './components/credito/credito.component';
 import { NgFor } from '@angular/common';
+import { CrearCuentaComponent } from "./crear-cuenta/crear-cuenta.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ReactiveFormsModule, NgFor, CreditoComponent],
+  imports: [ReactiveFormsModule, NgFor, CreditoComponent, CrearCuentaComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

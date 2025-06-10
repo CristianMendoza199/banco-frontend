@@ -3,14 +3,16 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { ClienteService } from './services/cliente.service';
 import { CreditoService } from './services/credito.service';
 import { CuentaService } from './services/cuenta.service';
+import { TransaccionesService } from './services/transacciones.service';
 import { CreditoComponent } from './components/credito/credito.component';
 import { NgFor } from '@angular/common';
 import { CrearCuentaComponent } from "./crear-cuenta/crear-cuenta.component";
+import { TransaccionesComponent } from './transacciones/transacciones.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ReactiveFormsModule, NgFor, CreditoComponent, CrearCuentaComponent],
+  imports: [ReactiveFormsModule, NgFor, CreditoComponent, CrearCuentaComponent, TransaccionesComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

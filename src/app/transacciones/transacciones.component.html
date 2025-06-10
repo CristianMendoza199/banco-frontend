@@ -1,0 +1,14 @@
+<h2>Registrar Transacción</h2>
+<form [formGroup]="formulario" (ngSubmit)="guardar()">
+  <input type="number" formControlName="cuenta_id" placeholder="ID de la Cuenta" required />
+  
+  <select formControlName="tipo" required>
+    <option value="">Seleccione tipo</option>
+    <option value="Deposito">Depósito</option>
+    <option value="Retiro">Retiro</option>
+  </select>
+  
+  <input type="number" formControlName="monto" placeholder="Monto" step="0.01" required />
+  
+  <button type="submit">Registrar</button>
+</form>

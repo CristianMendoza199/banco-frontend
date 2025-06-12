@@ -1,0 +1,11 @@
+<h2>Registrar Usuario</h2>
+
+<form [formGroup]="formulario" (ngSubmit)="registrar()">
+  <input type="email" formControlName="email" placeholder="Email" required />
+  <input type="password" formControlName="password" placeholder="Contraseña" required />
+  <input type="number" formControlName="cliente_id" placeholder="ID del cliente" required />
+  <button type="submit">Registrar</button>
+</form>
+
+<p *ngIf="successMsg" style="color: green;">{{ successMsg }}</p>
+<p *ngIf="errorMsg" style="color: red;">{{ errorMsg }}</p>

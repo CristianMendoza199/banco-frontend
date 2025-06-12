@@ -12,7 +12,13 @@ export class TransaccionesService {
   
   constructor(private http: HttpClient) { }
 
-    registrarTransaccion(transaccion: any): Observable<any>{
-      return this.http.post(`${this.apiUrl}/transaccion`, transaccion);
-    }
+   registrarTransaccion(transaccion: any): Observable<any> {
+    const token = localStorage.getItem('token');
+
+    return this.http.post(`${this.apiUrl}/transaccion`, transaccion, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+  }
 }

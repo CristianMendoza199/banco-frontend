@@ -8,11 +8,15 @@ import { CreditoComponent } from './components/credito/credito.component';
 import { NgFor } from '@angular/common';
 import { CrearCuentaComponent } from "./crear-cuenta/crear-cuenta.component";
 import { TransaccionesComponent } from './transacciones/transacciones.component';
+import { LoginComponent } from "./login-auth/login-auth.component";
+import { RegistroComponent } from './registro-user/registro-user.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ReactiveFormsModule, NgFor, CreditoComponent, CrearCuentaComponent, TransaccionesComponent],
+  imports: [ReactiveFormsModule, NgFor, CreditoComponent, CrearCuentaComponent,
+     TransaccionesComponent, LoginComponent, RouterOutlet,RegistroComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
